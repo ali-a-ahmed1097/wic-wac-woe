@@ -1,0 +1,31 @@
+:root {
+    --brdr: 2px solid black;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.right {
+    border-left: var(--brdr);
+}
+
+.left {
+    border-right: var(--brdr);
+}
+
+.top {
+    border-bottom: var(--brdr);
+}
+
+.bottom {
+    border-top: var(--brdr);
+}
