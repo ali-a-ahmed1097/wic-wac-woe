@@ -1,8 +1,11 @@
+// Module
 const Gameboard = (() => {
+    // Private
     let gameboard = [0, 0, 0,
                      0, 0, 0,
                      0, 0, 0];
 
+    // Public
     const setGameBoard = (i, piece) => gameboard[i] = piece;
     const getGameBoard = () => gameboard;
     const getWinner = function () {
@@ -26,7 +29,9 @@ const Gameboard = (() => {
     };
 })();
 
+// Factory function
 const Player = (pName, piece) => {
+    // Public
     const getName = () => pName;
     const getPiece = () => piece;
 
@@ -35,3 +40,18 @@ const Player = (pName, piece) => {
         getPiece
     };
 };
+
+// Module
+const displayController = (() => {
+    // Private
+    let players = [];
+    
+    // Public
+    const createPlayer = (pName, piece) => { players.push(Player(pName, piece)) };
+    const playMove = (player, tile) => { Gameboard.setGameBoard(tile, players[player].getPiece) };
+
+    return {
+        createPlayer,
+        playMove
+    };
+})();
