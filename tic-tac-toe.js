@@ -55,3 +55,19 @@ const displayController = (() => {
         playMove
     };
 })();
+
+const startBtn = document.getElementById('start');
+const startDiv = document.getElementById('starting');
+const Board = document.getElementById('board');
+//startBtn.classList.toggle('hide');
+startBtn.addEventListener('click', function () {
+    const p1Name = document.getElementById('p1');
+    const p2Name = document.getElementById('p2');
+
+    if (p1Name.value === '' || p2Name.value === '') document.getElementById('error').classList.add('error');
+    else {
+        startDiv.classList.toggle('hide');
+        startDiv.classList.toggle('starting');
+        document.getElementById('board').classList.toggle('hide');
+    }
+});

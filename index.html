@@ -9,7 +9,7 @@
     <script src="./tic-tac-toe.js" defer></script>
 </head>
 <body>
-    <div class="board">
+    <div id="board" class="board hide">
         <div id="0" class="top left tile"></div>
         <div id="1" class="top tile"></div>
         <div id="2" class="top right tile"></div>
@@ -19,6 +19,15 @@
         <div id="6" class="bottom left tile"></div>
         <div id="7" class="bottom tile"></div>
         <div id="8" class="bottom right tile"></div>
+    </div>
+
+    <div id="starting" class="starting">
+        <span id="error"></span>
+        <label for="p1">Player 1 Name:</label>
+        <input type="text" name="p1" id="p1">
+        <label for="p2" style="grid-row-start: 3;">Player 2 Name:</label>
+        <input type="text" name="p2" id="p2" style="grid-row-start: 3; grid-column-start: 2;">
+        <button id="start">Start game!</button>
     </div>
 </body>
 </html>

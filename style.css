@@ -29,3 +29,30 @@
 .bottom {
     border-top: var(--brdr);
 }
+
+.hide {
+    display: none;
+}
+
+.error:after {
+    content:"* Please enter names for both players";
+}
+
+span {
+    color: red;
+}
+
+#error {
+    grid-column: 1 / 6;
+}
+
+.starting {
+    display: grid;
+    grid-template-rows: repeat(4, 20px);
+    grid-template-columns: repeat(2, max-content);
+    gap: 5px;
+}
+
+#start {
+    grid-row-start: 4;
+}
