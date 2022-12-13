@@ -56,3 +56,9 @@ span {
 #start {
     grid-row-start: 4;
 }
+
+.board > div {
+    text-align: center;
+    font-size: 88px;
+    cursor: pointer;
+}
