@@ -101,7 +101,14 @@ function game(e) {
         tile.classList.add('claimed');
         displayController.playMove(Number(tile.id));
         let winner = displayController.getWinner();
-        if (!(winner === '')) {console.log(winner);}
+        if (!(winner === '')) {
+            let w = document.getElementById('winner');
+            board.classList.toggle('hide');
+            w.classList.toggle('hide');
+            document.getElementById('restart').classList.toggle('hide');
+            if (winner === null) w.textContent = `Draw!`;
+            else w.textContent = `${winner} wins!`;
+        }
     }
     
 }
