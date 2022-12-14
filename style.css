@@ -62,3 +62,7 @@ span {
     font-size: 88px;
     cursor: pointer;
 }
+
+.board > div:not(.claimed){
+    color: gray;
+}
